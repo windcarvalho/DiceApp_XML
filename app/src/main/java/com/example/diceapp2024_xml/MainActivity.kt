@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         btRoll.setOnClickListener {
 
-            val d: Dice = Dice(6)
+            val dice: Dice = Dice(6)
             val random = rollDice()
             drawableRes = when (random) {
                 1 -> R.drawable.dice_1
