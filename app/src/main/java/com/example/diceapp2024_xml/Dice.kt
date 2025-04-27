@@ -1,6 +1,7 @@
 package com.example.diceapp2024_xml
 
 import android.util.Log
+import kotlin.random.Random
 
 data class Dice (val numFaces:Int){
     var number:Int = 1
@@ -9,9 +10,12 @@ data class Dice (val numFaces:Int){
                 field=value
             }else
             {
-                Log.v("pdm","Tentaram alterar um valor fora do range")
+                Log.v("pdm","Tentaram alterar um valor fora do range:"+value)
             }
         }
 
-
+    fun rollDice():Int{
+        this.number = Random.nextInt(this.numFaces) +1
+        return this.number
+    }
 }
